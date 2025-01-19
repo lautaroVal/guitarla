@@ -43,3 +43,29 @@
 
 - Implementación modular y reutilizable de componentes.
 - Aplicación de principios de State Management para controlar el estado del carrito de compras.
+
+## Installation  and use
+
+1. Clona el repositorio:
+
+```bash
+  git clone https://github.com/lautaroVal/guitarla.git
+```
+2. Navega al directorio del proyecto:
+
+```bash
+  cd guitarla
+```
+3. Instala las dependencias:
+
+```bash
+  npm install
+```
+4. Inicia la aplicación:
+
+```bash
+  npm run dev
+```
+
+5. Accede a la aplicación:
+Abre tu navegador y navega a http://localhost:3000 para interactuar con la aplicación.
