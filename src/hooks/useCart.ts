@@ -16,12 +16,7 @@ export const useCart = () => {
   }, [cart])
 
 
-  function clearCart() {
-    setCart([])
-  }
-
   return {
-    cart,
-    clearCart
+    cart
   }
 }
