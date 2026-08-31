@@ -11,38 +11,10 @@ export const useCart = () => {
 
   const [cart, setCart] = useState(initialCart)
 
-  const MAX_ITEMS = 5
-
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart))
   }, [cart])
 
-
-  function increaseQuantity(id : CartItem['id']) {
-    const updatedCart = cart.map(item => {
-      if (item.id === id && item.quantity < MAX_ITEMS) {
-        return {
-          ...item,
-          quantity: item.quantity + 1
-        }
-      }
-      return item
-    })
-    setCart(updatedCart)
-  }
-
-  function decreaseQuantity(id : CartItem['id']) {
-    const updateCart = cart.map(item => {
-      if (item.id === id && item.quantity > 1) {
-        return {
-          ...item,
-          quantity: item.quantity - 1
-        }
-      }
-      return item
-    })
-    setCart(updateCart)
-  }
 
   function clearCart() {
     setCart([])
@@ -50,8 +22,6 @@ export const useCart = () => {
 
   return {
     cart,
-    increaseQuantity,
-    decreaseQuantity,
     clearCart
   }
 }
